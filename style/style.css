@@ -5,8 +5,12 @@ body {
     height: 100vh;
 }
 
+html {
+    font-size: 16px;
+}
+
 .star-wars-header {
-    padding: 25px;
+    padding: 0.5rem;
     text-align: center;
     background-color: black;
     color: white;
@@ -16,10 +20,12 @@ body {
     src: url('../fonts/Starjedi.ttf');
 }
 .star-wars-heading {
-    font-family: 'StarJedi', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin: 0px;
-    font-size: 60px;
-    line-height: 45px;
+    font-family: 'StarJedi';
+    margin: 0rem;
+    font-size: 2rem;
+    line-height: 1.6rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid rgb(28, 30, 30);
 }
 
 .header-navigation {
@@ -35,18 +41,17 @@ body {
 .sw-on-disney {
     font-family: "segoe ui";
     color: rgb(250, 199, 89);
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 main {
     background-color: black;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .search-databank {
     display: flex;
-    justify-content: center;
     background-color: rgb(28, 30, 30);
     border-radius: 7px;
     cursor: text;
@@ -57,18 +62,19 @@ main {
     background-color: transparent;
     border: none;
     flex-grow: 1;
-    line-height: 62px;
-    font-size: 22px;
+    line-height: 4rem;
+    font-size: 1.3rem;
     font-weight: 600;
     align-items: center;
 }
 
 .search-bar::placeholder {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI';
     color: rgb(185, 185, 185);
-    text-indent: 6px;
+    text-indent: 0.4rem;
     border-bottom: 1px solid black;
-    padding-bottom: 10px;
+    padding-bottom: 0.5rem;
+    
 }
 
 .search-bar:placeholder-shown{
@@ -83,10 +89,9 @@ main {
 }
 
 .search-button {
-    cursor: pointer;
     display: flex;
     font-family: "segoe ui";
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 650;
     background-color: transparent;
     color: white;
@@ -102,13 +107,18 @@ main {
     padding-right: 14px;
 }
 
+.search-button-text {
+    display: none;
+}
+
 .search-button:hover svg{
     filter: drop-shadow(0 0 5px rgb(229, 229, 160));
 }
 
 
 .cards-section{
-    margin: 80px;
+    margin-top: 2rem;
+    position: relative;
 }
 
 .cards-section-header {
@@ -121,31 +131,35 @@ main {
 
 .cards-header-name {
     font-family: "segoe ui";
-    font-size: 22px;
+    font-size: 1.4rem;
     color: white;
     margin: 0px;
 }
 
 .cards-see-all {
     font-family: "segoe ui";
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     color: white;
     text-decoration: none;
 }
 
 .cards-row {
-    margin-top: 20px;
     display: flex;
-    gap: 30px;
+    margin-top: 1.5rem;
+    overflow-x: scroll;
+    scrollbar-width: none;
 }
 
 .card {
+    max-width: fit-content;
     text-decoration: none;
-    width: 250px;
     display: inline;
     border-radius: 6px;
     overflow: hidden;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis:content;
 }
 
 .card img {
@@ -157,11 +171,11 @@ main {
     color: white;
     font-family: "segoe ui";
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
     text-align: left;
-    padding-left: 10px;
-    padding-top: 15px;
-    padding-bottom: 35px;
+    padding-left: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
     background-color: rgb(31, 31, 31);
     position: relative;
 }
@@ -202,11 +216,37 @@ main {
     box-shadow: 0 0 8px #fff;
 }
 
+.cards-row-scroll-button {
+    position: absolute;
+    content: '';
+    right: 0rem;
+    top: 50%;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
 
 
 
 
 @media (min-width: 768px) {
+
+    .star-wars-header {
+        padding: 1.5rem;
+        text-align: center;
+        background-color: black;
+        color: white;
+    }
+
+    .star-wars-heading {
+        font-family: 'StarJedi', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin: 0px;
+        padding: 0px;
+        font-size: 4rem;
+        line-height: 3rem;
+        border-bottom: none;
+    }
+
     .header-navigation {
         display: flex;
         justify-content: center;
@@ -214,5 +254,70 @@ main {
         padding-bottom: 10px;
         gap: 45px;
         border-bottom: 1px solid rgba(172, 172, 172, 0.548);
+    }
+
+    .search-button {
+        cursor: pointer;
+        display: flex;
+        font-family: "segoe ui";
+        font-size: 15px;
+        font-weight: 650;
+        background-color: transparent;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        margin-right: 30px;
+        align-items: center;
+    }
+
+    .search-button-text {
+        display: inline;
+    }
+
+.search-button svg {
+    width: 16px;
+    height: 16px;
+    padding-right: 14px;
+}
+
+    main {
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    .cards-section {
+    margin: 5rem;
+    }
+
+    .cards-row {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 2rem;
+    }
+
+    .card {
+    text-decoration: none;
+    max-width: 250px;
+    display: inline;
+    border-radius: 6px;
+    overflow: hidden;
+    }
+
+    .card img {
+    display: block;
+    width: 100%;
+    }
+
+    .card-description {
+    color: white;
+    font-family: "segoe ui";
+    font-weight: bold;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 35px;
+    background-color: rgb(31, 31, 31);
+    position: relative;
     }
 }
