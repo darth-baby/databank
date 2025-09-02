@@ -72,9 +72,7 @@ main {
     font-family: 'Segoe UI';
     color: rgb(185, 185, 185);
     text-indent: 0.4rem;
-    border-bottom: 1px solid black;
     padding-bottom: 0.5rem;
-    
 }
 
 .search-bar:placeholder-shown{
@@ -97,14 +95,13 @@ main {
     color: white;
     border-radius: 6px;
     border: none;
-    margin-right: 30px;
+    padding-right: 1rem;
     align-items: center;
 }
 
 .search-button svg {
     width: 16px;
     height: 16px;
-    padding-right: 14px;
 }
 
 .search-button-text {
@@ -147,6 +144,7 @@ main {
 .cards-row {
     display: flex;
     margin-top: 1.5rem;
+    gap: 2rem;
     overflow-x: scroll;
     scrollbar-width: none;
 }
@@ -175,9 +173,11 @@ main {
     text-align: left;
     padding-left: 0.5rem;
     padding-top: 1rem;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
     background-color: rgb(31, 31, 31);
     position: relative;
+
+    clip-path:polygon(0 0, 100% 0, 100% 100%, 86% 100%, 82% 88%, 54% 88%, 50% 100%, 0 100%);
 }
 
 .indicator {
@@ -266,7 +266,7 @@ main {
         color: white;
         border-radius: 6px;
         border: none;
-        margin-right: 30px;
+        padding-right: 2rem;
         align-items: center;
     }
 
@@ -274,11 +274,11 @@ main {
         display: inline;
     }
 
-.search-button svg {
-    width: 16px;
-    height: 16px;
-    padding-right: 14px;
-}
+    .search-button svg {
+        width: 16px;
+        height: 16px;
+        padding-right: 0.8rem;
+    }
 
     main {
         margin-left: 4rem;
@@ -301,6 +301,7 @@ main {
     display: inline;
     border-radius: 6px;
     overflow: hidden;
+    flex: 0 0 250px;
     }
 
     .card img {
@@ -312,12 +313,13 @@ main {
     color: white;
     font-family: "segoe ui";
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
     text-align: left;
-    padding-left: 10px;
-    padding-top: 15px;
-    padding-bottom: 35px;
+    padding-left: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
     background-color: rgb(31, 31, 31);
     position: relative;
-    }
+    clip-path:polygon(0 0, 100% 0, 100% 100%, 92% 100%, 86% 88%, 64% 88%, 58% 100%, 0 100%);
+}
 }
