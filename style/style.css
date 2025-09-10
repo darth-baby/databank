@@ -246,8 +246,14 @@ main {
 }
 
 
+@media (min-width:768px) and (max-width: 991.98px) {
+    .card {
+        flex: 0 0 calc((100% - 4rem) / 3);
+    }
+}
 
-@media (min-width: 768px) {
+
+@media (min-width: 992px) {
 
     .star-wars-header {
         padding: 1.5rem;
@@ -304,7 +310,7 @@ main {
     }
 
     .cards-section {
-    margin: 5rem;
+    margin: 2rem;
     }
 
     .cards-row {
@@ -315,11 +321,11 @@ main {
 
     .card {
     text-decoration: none;
-    max-width: 250px;
     display: inline;
     border-radius: 6px;
     overflow: hidden;
-    flex: 0 0 250px;
+    flex: 0 0 calc((100% - 8rem) / 5);
+    aspect-ratio: 3/4;
     }
 
     .card img {
@@ -339,5 +345,13 @@ main {
     background-color: rgb(31, 31, 31);
     position: relative;
     clip-path:polygon(0 0, 100% 0, 100% 100%, 92% 100%, 86% 88%, 64% 88%, 58% 100%, 0 100%);
+    }
+
+    .scroll-back-button {
+    top: 35%;
 }
+
+    .scroll-forward-button {
+    top: 35%;
+    }
 }
